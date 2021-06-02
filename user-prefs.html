@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>user-prefs</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Go to main page</a>
+        <a href="map.html">Go too map</a>
+    </nav>
+    <header>
+        <h1>User-Prefs</h1>
+    </header>
+
+    <form onsubmit="onSavePref(event)">
+        <table>
+            <tr>
+                <td><label for="color"> Text Color </label></td>
+                <td><input type="color" id="color" name="textColor" form="frmRegister" value="#ffffff" /></td>
+            </tr>
+            <tr>
+                <td><label for="back-ground-color"> Back-Ground Color </label></td>
+                <td><input type="text" id="back-ground-color" name="bgColor" form="frmRegister" value="#ffffff" /></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" /></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td>
+                    <input type="range" id="age" name="age" min="18" max="120" step="10" value="26"
+                        oninput="showAge(this.value);" />
+                    <span id="sAge">26</span>
+                </td>
+            </tr>
+        </table>
+
+        <button>Save</button>
+
+    </form>
+
+
+
+    <script src="js/utilService.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/storageService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/user-pref-controller.js"></script>
+</body>
+
+</html>
